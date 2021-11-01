@@ -1,2 +1,2 @@
 # PE_Tracker
-Test repo for Capstone course
+This shows that our integration with Pivotal Tracker works.
