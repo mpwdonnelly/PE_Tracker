@@ -18,15 +18,15 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', async(req, res) => {
-    try {}
+    try {
     const client = await pool.connect();
 
     client.release();
     res.send("All Systems Green");
-  }
-  catch (err) {
-    console.error(err);
-    res.send("Error: " + err);
-  }
+    }
+    catch (err) {
+      console.error(err);
+      res.send("Error: " + err);
+    }
   })
   .listen(PORT, () => console.log('Listening on ${ PORT }'));
