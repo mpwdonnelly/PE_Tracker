@@ -10,7 +10,7 @@
       <button id='<%= r.id %>'
         onClick='javascript:logTask(<%= r.id %>);'><%= r.name %></button>
     <% }); %>
-    <script type="text/javascript">
+    <script>
       let currentTaskId = null;
       const logTask = async function(id) {
         const response = await fetch('/log', {
