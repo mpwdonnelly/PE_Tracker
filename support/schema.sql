@@ -20,7 +20,7 @@ CREATE TABLE schools (
 CREATE TABLE observations (
   id SERIAL PRIMARY KEY,
   users_id INT NOT NULL,
-  students_id INT NOT NULL, 
+  students_id INT NOT NULL,
   tasks_id INT NOT NULL,
   duration INTERVAL NOT NULL
 );
@@ -28,4 +28,7 @@ CREATE TABLE observations (
 CREATE TABLE tasks (
   id SERIAL PRIMARY KEY,
   name TEXT NOT NULL
-)
+);
+
+INSERT INTO tasks (name) VALUES
+('Planned Pres.');
